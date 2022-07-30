@@ -1,5 +1,5 @@
 # Mozdony ismertető alkalmazás
-Eredeti szakmám segítették a témaválasztást a vizsgamunka elkészítéséhez. Az alkalmazás a magyar vasútvonalakon futott és futó mozdonyokról ad egy rövid áttekintést a teljesség igénye nélkül. A mozdonyok műszaki adatainak bemutatása és rövid történeti ismertetése mellett a regisztrált és bejelentkezett felhasználó 3 féle méretben modelleket vásárolhat a kiválasztott típusból, valamint kommentekkel visszajelzéseket adhat, véleményt formálhat, illetve kiegészítésekkel bővítheti az ismereteket.
+Az alkalmazás a magyar vasútvonalakon futott és futó mozdonyokról ad egy rövid áttekintést a teljesség igénye nélkül. A mozdonyok műszaki adatainak bemutatása és rövid történeti ismertetése mellett a regisztrált és bejelentkezett felhasználó 3 féle méretben modelleket vásárolhat a kiválasztott típusból, valamint kommentekkel visszajelzéseket adhat, véleményt formálhat, illetve kiegészítésekkel bővítheti az ismereteket.
 
 # Felhasználói adatok belépéshez
 ## Regisztráció
@@ -17,12 +17,12 @@ Eredeti szakmám segítették a témaválasztást a vizsgamunka elkészítéséh
 
 # Belépés
 ## Backend
-cd \Locos-backend\
+<!-- cd \Locos-backend\
 - npm run docker:build
 - npm run docker:run
 
 cd \LocoAngular\
-- ng s
+- ng s -->
 
 # Entitások
 ## Felhasználók
@@ -96,7 +96,7 @@ A regisztrált, bejelentkezett, 'admin' szereppel rendelkező felhasználó itt 
 # API végpontok
 |Végpont|funkció|
 |:---|:---|
-|POST/login|felhasználó bejelentkezés|
+<!-- |POST/login|felhasználó bejelentkezés|
 |POST/refresh|bejelentkezés fenntartása|
 |POST/logout|felhasználó kijelentkezés|
 |GET/diesel|dízel mozdonyok kilistázása|
@@ -110,4 +110,4 @@ A regisztrált, bejelentkezett, 'admin' szereppel rendelkező felhasználó itt 
 |POST/buyItem|vásárlás mentése|
 |GET/buyItem|vásárlások lekérdezése|
 |POST/user|felhasználók mentése (regisztráció)|
-|GET/user|felhasználók listázása|
+|GET/user|felhasználók listázása| -->
