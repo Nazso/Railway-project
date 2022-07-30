@@ -1,1 +1,34 @@
-<p>diesel works!</p>
+<div class="diesel-main">
+    <div class="container container-text">
+        <h2>A dízel vontatás rövid áttekintése:</h2>
+        <p>A dízelmozdony olyan mozdony, amelynek a mozgáshoz szükséges energiát egy belső égésű erőgép adja. A
+            dízelmozdonyok erőgépe (a hajtómotor) belső égésű hőerőgép. Általában négyütemű, ritkábban kétütemű dízelmotor.</p>
+        <p>A dízelmotor sajátossága, hogy terhelhetősége és leadott teljesítménye fordulatszámfüggő, alacsony fordulaton
+            nem terhelhető, ezért járműhajtásra közvetlenül nem használható fel. Ennek kiküszöbölésére a hajtómotor és a
+            hajtott tengelyek közé külön gépezeti egység, az úgynevezett „erőátvitel” beépítése szükséges. Az erőátvitel
+            rendszerének kiválasztása általában a jármű feladatának megfelelően történik. Dízelmozdonyoknál jellemzően
+            háromféle erőátviteli rendszert alkalmaznak: Dízel-mechanikus erőátvitel, Dízel-hidraulikus erőátvitel, Dízel-villamos erőátvitel</p>
+    </div>
+    <div class="container container-card">
+        <mat-card class="diesel-card" *ngFor="let loco of locos">
+            <mat-card-header>
+              <!-- <div mat-card-avatar class="example-header-image"><img class="header-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/M%C3%81V_6342-004.jpg/250px-M%C3%81V_6342-004.jpg" alt=""></div> -->
+              <img mat-card-avatar class="example-header-image header-img" src="{{ loco.url }}" alt="">
+              <mat-card-title>{{ loco.name }}</mat-card-title>
+              <mat-card-subtitle>{{ loco.type }}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image class="img-card" src="{{ loco.url }}" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+              <p>
+                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                bred for hunting.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" >Részletek</button>
+              <!-- <button mat-button>SHARE</button> -->
+            </mat-card-actions>
+          </mat-card>
+    </div>
+</div>

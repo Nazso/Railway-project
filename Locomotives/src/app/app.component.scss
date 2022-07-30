@@ -1,0 +1,32 @@
+$background_main: rgb(3, 81, 248);
+$background_cards: rgb(119, 205, 245);
+$color_font: rgb(247, 247, 144);
+
+* {
+    box-sizing: border-box;
+}
+
+.app-toolbar {
+    z-index: 2;
+    background-color: $background_main;
+  }
+  
+  .sidenav-container {
+    z-index: 1;
+  }
+  
+  mat-sidenav-content {
+    // padding: 2rem;
+    box-sizing: border-box;
+  }
+
+  .font-color {
+    color: $color_font;
+  }
+  
+  a[mat-button] {
+    color: rgb(200, 200, 200);
+    &.active {
+      color: $color_font;
+    }
+  }

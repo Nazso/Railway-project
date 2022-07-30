@@ -7,14 +7,16 @@ import { LocoModel } from '../models/diesel.model';
 @Injectable({
   providedIn: 'root'
 })
-export class DieselService {
+export class ElectricService {
 
-BASE_URL: string = environment.apiUrl + "diesel";
+  BASE_URL: string = environment.apiUrl + 'electric';
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  public getDiesel(): Observable<LocoModel[]> {
-    return this.http.get<LocoModel[]>(this.BASE_URL);
-  };
+  public getElectric(): Observable<LocoModel[]> {
+    return this.http.get<LocoModel[]>(this.BASE_URL)
+  }
 
 }
