@@ -9,6 +9,8 @@ $color_font: rgb(247, 247, 144);
 .app-toolbar {
     z-index: 2;
     background-color: $background_main;
+    position: fixed;
+    top: 0;
   }
   
   .sidenav-container {
