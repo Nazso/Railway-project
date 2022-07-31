@@ -3,15 +3,18 @@ Az alkalmazás a magyar vasútvonalakon futott és futó mozdonyokról ad egy r�
 
 # Felhasználói adatok belépéshez
 ## Regisztráció
+Fejlesztés alatt
 <!-- - A felhasználónév csak kis- és nagybetű lehet ékezet nélkül és szám 5-15 karakter hosszúságban
 - Email validáció működik
 - A jelszó csak kis- és nagybetű lehet ékezet nélkül és szám 4-15 karakter hosszúságban -->
 
 ## Felhasználó 'user' szereppel:
+Fejlesztés alatt
 <!-- - username: Zsolt
 - password: teszt -->
 
 ## Felhasználó 'admin' szereppel:
+Fejlesztés alatt
 <!-- - username: YodaOne
 - password: teszt -->
 
@@ -94,6 +97,7 @@ A regisztrált és bejelentkezett felhasználók az itt megjelenő form-on írha
 A regisztrált, bejelentkezett, 'admin' szereppel rendelkező felhasználó itt megtekintheti a felhasználók, bevásárlások és kommentek listáját. A kommentek közül lehetőség van törlésre.
 
 # API végpontok
+Fejlesztés alatt
 |Végpont|funkció|
 |:---|:---|
 <!-- |POST/login|felhasználó bejelentkezés|
