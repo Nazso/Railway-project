@@ -58,3 +58,8 @@ $color_font: rgb(247, 247, 144);
     // width: 100%;
     height: 300px;
 }
+
+.short-card {
+    display: flex;
+    justify-content: space-between;
+}

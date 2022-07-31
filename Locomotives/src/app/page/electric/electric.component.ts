@@ -23,8 +23,11 @@ export class ElectricComponent implements OnInit {
         this.locos = locos
       },
       error: (err) => {console.log(err)},
-      complete: () => {console.log(`The request has done!`)},
+      complete: () => {
+        console.log(`The request has done!`)
+      },
     })
   }
+
 
 }

@@ -30,11 +30,18 @@
             </mat-card-header>
             <img mat-card-image class="img-card" src="{{ loco.url }}" alt="Photo of a Shiba Inu">
             <mat-card-content>
-              <p>
-                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                bred for hunting.
-              </p>
+              <div class="short-card">
+                <div>
+                  <p>Gyártó: {{ loco.manufacturer }}</p>
+                  <p>Tengelyek száma: {{ loco.numberOfAxels }}</p>
+                  <p>Tengelyelrendezés: {{ loco.wheelArrangement }}</p>
+                </div>
+                <div>
+                  <p>Max sebesség: {{ loco.topSpeed }}</p>
+                  <p>Teljesítmény: {{ loco.power }}</p>
+                  <p>Áramnem: {{ loco.typeOfElectricity }}</p>
+                </div>
+              </div>
             </mat-card-content>
             <mat-card-actions>
               <button mat-raised-button color="primary" >Részletek</button>
