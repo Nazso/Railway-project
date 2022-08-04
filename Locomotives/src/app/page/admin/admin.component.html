@@ -1,1 +1,58 @@
-<p class="admin-main">admin works!</p>
+<div class="admin-main">
+    <div class="button-container">
+        <button mat-stroked-button (click)="userVisibility()">Felhasználók</button>
+        <button mat-stroked-button (click)="commentVisibility()">Kommentek</button>
+        <button mat-stroked-button (click)="buyItemVisibility()">Vásárlások</button>
+        <button mat-stroked-button (click)="allVisibility()">Összes</button>
+    </div>
+    <div class="container-table" *ngIf="visible === 'user' || visible === 'all'">
+        <app-user-list></app-user-list>
+    </div>
+    <div class="container-table" *ngIf="visible === 'comment' || visible === 'all'">
+        <app-comment-list></app-comment-list>
+    </div>
+    
+    <div class="container-table" *ngIf="visible === 'buyItem' || visible === 'all'">
+        <app-buy-item-list></app-buy-item-list>
+    </div>
+</div>
+
+<!-- Without paginator -->
+<!-- <h2>Kommentek listája</h2>
+<table mat-table
+    [dataSource]="commentSource$"
+    class="mat-elevation-z8"> -->
+
+    <!-- Define culomns -->
+    <!-- <ng-container *ngFor="let col of commentColumns" [matColumnDef]="col">
+        <th mat-header-cell *matHeaderCellDef>{{ col | titlecase }}</th>
+        <td mat-cell *matCellDef="let comment">{{ comment[col] }}</td>
+    </ng-container> -->
+
+    <!-- Define rows -->
+    <!-- <tr mat-header-row *matHeaderRowDef="commentColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: commentColumns"></tr>
+</table> -->
+
+<!-- With paginator -->
+<!-- <h2>Kommentek listája</h2>
+<table mat-table
+    [dataSource]="commentSource"
+    class="mat-elevation-z8"> -->
+
+    <!-- Define culomns -->
+    <!-- <ng-container *ngFor="let col of commentColumns" [matColumnDef]="col">
+        <th mat-header-cell *matHeaderCellDef>{{ col | titlecase }}</th>
+        <td mat-cell *matCellDef="let comment">{{ comment[col] }}</td>
+    </ng-container> -->
+
+    <!-- Define rows -->
+    <!-- <tr mat-header-row *matHeaderRowDef="commentColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: commentColumns"></tr>
+</table>
+
+<mat-paginator 
+    class="paginator-list mat-elevation-z8" 
+    [pageSizeOptions]="pageSizeComment" 
+    showFirstLastButtons>
+</mat-paginator> -->

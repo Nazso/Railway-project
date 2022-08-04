@@ -9,7 +9,7 @@ import { LocoModel } from '../models/diesel.model';
 })
 export class ElectricService {
 
-  BASE_URL: string = environment.apiUrl + 'electric';
+  BASE_URL: string = environment.apiUrl + 'locomotives' + '/' + 'electric';
 
   constructor(
     private http: HttpClient

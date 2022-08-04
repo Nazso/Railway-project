@@ -1,0 +1,26 @@
+<div class="admin-main">
+    <div class="container-table">
+        <!-- With paginator -->
+        <h2>Vásárlások listája</h2>
+        <table mat-table
+            [dataSource]="itemSource"
+            class="mat-elevation-z8">
+        
+            <!-- Define culomns -->
+            <ng-container *ngFor="let col of buyItemColumns" [matColumnDef]="col">
+                <th mat-header-cell *matHeaderCellDef>{{ col | titlecase }}</th>
+                <td mat-cell *matCellDef="let item">{{ item[col] }}</td>
+            </ng-container>
+        
+            <!-- Define rows -->
+            <tr mat-header-row *matHeaderRowDef="buyItemColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: buyItemColumns"></tr>
+        </table>
+
+        <mat-paginator 
+            class="paginator-list mat-elevation-z8" 
+            [pageSizeOptions]="pageSizeBuyItem" 
+            showFirstLastButtons>
+        </mat-paginator>
+    </div>
+</div>
