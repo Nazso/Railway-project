@@ -21,19 +21,19 @@
             <mat-card-content>
               <div class="short-card">
                 <div>
-                  <p>Gyártó: {{ loco.manufacturer }}</p>
-                  <p>Tengelyek száma: {{ loco.numberOfAxels }}</p>
-                  <p>Tengelyelrendezés: {{ loco.wheelArrangement }}</p>
+                  <p><strong>Gyártó: </strong>{{ loco.manufacturer }}</p>
+                  <p><strong>Tengelyek száma: </strong>strong>{{ loco.numberOfAxels }}</p>
+                  <p><strong>Tengelyelrendezés: </strong>{{ loco.wheelArrangement }}</p>
                 </div>
                 <div>
-                  <p>Max sebesség: {{ loco.topSpeed }}</p>
-                  <p>Teljesítmény: {{ loco.power }}</p>
-                  <p>Erőátvitel: {{ loco.transmission }}</p>
+                  <p><strong>Max sebesség: </strong>{{ loco.topSpeed }}</p>
+                  <p><strong>Teljesítmény: </strong>{{ loco.power }}</p>
+                  <p><strong>Erőátvitel: </strong>{{ loco.transmission }}</p>
                 </div>
               </div>
             </mat-card-content>
             <mat-card-actions>
-              <button mat-raised-button color="primary" >Részletek</button>
+              <button mat-raised-button color="primary" (click)="goToDetails(loco)">Részletek</button>
               <!-- <button mat-button>SHARE</button> -->
             </mat-card-actions>
           </mat-card>

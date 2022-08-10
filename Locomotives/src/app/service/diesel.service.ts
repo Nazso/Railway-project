@@ -17,4 +17,8 @@ BASE_URL: string = environment.apiUrl + "locomotives" + "/" + "diesel";
     return this.http.get<LocoModel[]>(this.BASE_URL);
   };
 
+  public getOneDiesel(_id: string): Observable<LocoModel> {
+    return this.http.get<LocoModel>(`${environment.apiUrl}locomotives/${_id}`)
+  };
+
 }

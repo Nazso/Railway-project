@@ -27,4 +27,8 @@ export class DieselComponent implements OnInit {
     })
   }
 
+  public goToDetails(loco?: LocoModel): void {
+    this.router.navigateByUrl(`részletek/${loco?._id}`)
+  }
+
 }

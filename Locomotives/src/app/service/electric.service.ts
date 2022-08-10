@@ -17,6 +17,10 @@ export class ElectricService {
 
   public getElectric(): Observable<LocoModel[]> {
     return this.http.get<LocoModel[]>(this.BASE_URL)
-  }
+  };
+
+  public getElectricOne(_id: string): Observable<LocoModel> {
+    return this.http.get<LocoModel>(`${environment.apiUrl}locomotives/${_id}`)
+  };
 
 }

@@ -14,7 +14,7 @@ export class ConfigService {
 
   menuItems: IMenuItem[] = [
     {url: '/', text: 'Főoldal', icon:'home'},
-    {url: '/dízel', text: 'Dízelmozdonyok', icon: 'directions_transit'},
+    {url: '/dízel', text: 'Dízelmozdonyok', icon: 'directions_transit', disabled: true},
     {url: '/villamos', text: 'Villamosmozdonyok', icon: 'tram'},
     {url: '/vásárlás', text: 'Vásárlás', icon: 'shopping_cart'},
     {url: '/komment', text: 'Kommentek', icon: 'edit_note'},

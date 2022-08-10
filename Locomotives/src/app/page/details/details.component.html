@@ -1,0 +1,35 @@
+<div class="details-main">
+    <mat-card class="details-card">
+        <mat-card-header>
+          <img mat-card-avatar class="example-header-image header-img" src="{{ loco?.url }}" alt="Photo of locomotive">
+          <mat-card-title>{{ loco?.name }}</mat-card-title>
+          <mat-card-subtitle>{{ loco?.type }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image class="img-card" src="{{ loco?.url }}" alt="Photo of locomotive">
+        <hr>
+        <mat-card-content>
+            <div class="short-card">
+                <div>
+                <p><strong>Gyártó: </strong>{{ loco?.manufacturer }}</p>
+                <p><strong>Tengelyek száma: </strong>{{ loco?.numberOfAxels }}</p>
+                <p><strong>Tengelyelrendezés: </strong>{{ loco?.wheelArrangement }}</p>
+                </div>
+                <div>
+                <p><strong>Max sebesség: </strong>{{ loco?.topSpeed }}</p>
+                <p><strong>Teljesítmény: </strong>{{ loco?.power }}</p>
+                <p><strong>Erőátvitel: </strong>{{ loco?.transmission }}</p>
+                </div>
+            </div>
+            <hr>
+            <div class="details-text">
+                <p><strong>Részletek a mozdonyról: </strong></p>
+                <p>{{ loco?.details }}</p>
+            </div>
+            <mat-card-actions class="details-button">
+                   <button mat-stroked-button color="primary">Kommentelni szeretnék!</button>
+                   <button mat-stroked-button color="primary">Vásárolni szeretnék</button>
+                   <button mat-stroked-button color="accent" (click)="backTo()">Vissza</button>               
+            </mat-card-actions>
+        </mat-card-content>
+      </mat-card>
+</div>

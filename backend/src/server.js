@@ -15,6 +15,11 @@ app.use(morgan('combined', {stream: {write: (message) => logger.info(message)}})
 
 app.use(cors());
 
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
+app.use(express.json());
+
 //endpoints
 app.use('/locomotives', locoRoutes);
 app.use('/comments', commentRoutes);

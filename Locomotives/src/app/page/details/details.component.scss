@@ -2,7 +2,7 @@ $background_main: rgb(3, 81, 248);
 $background_cards: rgb(119, 205, 245);
 $color_font: rgb(247, 247, 144);
 
-.comments-main {
+.details-main {
     padding: 50px;
     min-height: 1000px;
     background-color: $background_main;
@@ -10,7 +10,7 @@ $color_font: rgb(247, 247, 144);
     margin-top: 60px;
 }
 
-.container-comment {
+.container-details {
     width: 80%;
     background-color: $background_cards;
     border: 3px solid $color_font;
@@ -21,19 +21,18 @@ $color_font: rgb(247, 247, 144);
     text-align: justify;
 }
 
-.comment-fill-width {
+.details-card {
+    width: 60%;
+    background-color: white;
+    border: 3px solid $color_font;
+    border-radius: 5px;
     margin: auto;
-    padding: 50px;
 }
 
-.form-field {
-    width: 100%;
-
-}
-
-.first-field {
-    margin-top: 20px;
-    flex-wrap: wrap;
+.details-text {
+    font-size: large;
+    padding: 10px;
+    text-align: justify;
 }
 
 .comment-layout {
@@ -46,4 +45,27 @@ $color_font: rgb(247, 247, 144);
 
 button {
     margin: 10px;
+}
+
+.details-button {
+    margin: 10px;
+}
+
+.short-card {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-size: large;
+}
+
+.img-card {
+    width: 700px;
+    margin: auto;
+    border: 3px solid $background_main;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px 3px;
+}
+
+hr {
+    margin: 20px;
 }

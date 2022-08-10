@@ -3,14 +3,13 @@ const logger = require('../../config/logger');
 const createError = require('http-errors');
 
 exports.create = (req, res, next) => {
-
     const newComment = {
-    username: req.body['username'],
-    date: req.body['date'],
-    engine: req.body['engine'],
-    type: req.body['type'],
-    name: req.body['name'],
-    usercomment: req.body['usercomment']
+        username: req.body['username'],
+        date: req.body['date'],
+        engine: req.body['engine'],
+        type: req.body['type'],
+        name: req.body['name'],
+        usercomment: req.body['usercomment']
     };
 
     return commentService.create(newComment)
@@ -20,9 +19,8 @@ exports.create = (req, res, next) => {
         })
         .catch((err) => {
             logger.error(err);
-            return next(new createError.InternalServerError(err))
+            return next(new createError.InternalServerError(err));
         })
-
 };
 
 exports.findAll = (req, res, next) => {
@@ -48,6 +46,28 @@ exports.findOne = (req, res, next) => {
             return next(new createError.InternalServerError(err))
         })
 };
+
+exports.update = (req, res, next) => {
+    const id = req.params.id;
+
+    updatedComment = {
+        username: username,
+        date: date,
+        engine: engine,
+        type: type,
+        usercomment: usercomment,
+    }
+
+    return commentService.updateOne(id, updatedComment)
+        .then(comment => {
+            if(!comment) return next(new createError.NotFound(`Comment with ${id} does not exist!`))
+            res.json(updatedComment)
+        })
+        .catch((err) => {
+            logger.error(err)
+            return next(new createError.InternalServerError(err))
+        })
+}
 
 exports.delete = (req, res, next) => {
     const id = req.params.id;

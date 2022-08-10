@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 
 const CommentSchema = new mongoose.Schema({
-    username: {type: String, required: true},
-    date: {type: String, required: true},
-    engine: {type: String, required: true},
-    type: {type: String, required: true},
-    name: {type: String, required: true},
-    usercomment: {type: String, required: true}
+    username: {type: String},
+    date: {type: String},
+    engine: {type: String},
+    type: {type: String},
+    name: {type: String},
+    usercomment: {type: String}
 }, {
     timestamps: true
 });

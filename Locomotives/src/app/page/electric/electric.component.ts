@@ -29,5 +29,8 @@ export class ElectricComponent implements OnInit {
     })
   }
 
+public goToDetails(loco?: LocoModel): void {
+    this.router.navigateByUrl(`részletek/${loco?._id}`)
+  }
 
 }

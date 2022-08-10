@@ -25,6 +25,14 @@ export class CommentsService {
   public getOneComment(_id: string): Observable<Comment> {
     return this.http.get<Comment>(this.BASE_URL + _id)
   };
+
+  public get(id?: string): Observable<Comment | Comment[]> {
+    return this.http.get<Comment | Comment[]>(`${this.BASE_URL}/${id || ''}`)
+  };
+
+  public put(id: string, comment: Comment): Observable<any> {
+    return this.http.put<Comment>(`${this.BASE_URL}/${id}`, comment);
+  }
   
   public deleteComment(_id:string): Observable<Comment> {
     return this.http.delete<Comment>(this.BASE_URL + _id)
