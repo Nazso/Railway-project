@@ -46,10 +46,10 @@ A regisztrált és bejelentkezett felhasználók a kiválasztott mozdony típusb
 # User story lista, feladatok
 A felhasználó regisztrál és belép az alkalmazásba
 
-- Regisztrációs képernyő megvalósítása
-- regisztrációs végpont implementálása
-- Login képernyő megvalósítása
-- login végpont implementálása
+- Regisztrációs képernyő megvalósítása 
+- regisztrációs végpont implementálása 
+- Login képernyő megvalósítása 
+- login végpont implementálása 
 - JWT autentikáció implementáció, kliens oldali hozzáférés szabályozása autentikáció alapján
 - A felhasználó jegyet vásárol
 
