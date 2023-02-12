@@ -44,6 +44,9 @@ A regisztrált és bejelentkezett felhasználók véleményei, észrevételei é
 A regisztrált és bejelentkezett felhasználók a kiválasztott mozdony típusból 3 féle méretben vásárolhatnak modelleket.
 
 # User story lista, feladatok
+
+Fejlesztés alatt!!!
+
 A felhasználó regisztrál és belép az alkalmazásba
 
 - Regisztrációs képernyő megvalósítása 
