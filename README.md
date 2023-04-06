@@ -20,12 +20,13 @@ Fejlesztés alatt
 
 # Belépés
 ## Backend
-<!-- cd \Locos-backend\
-- npm run docker:build
-- npm run docker:run
+cd \backend\
+- npm start
+<!-- - npm run docker:build
+- npm run docker:run -->
 
 cd \Locomotives\
-- ng s -->
+- ng s
 
 # Entitások
 ## Felhasználók
