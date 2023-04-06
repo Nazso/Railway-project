@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-buy-items',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuyItemsComponent implements OnInit {
 
+  public buyItemForm: FormGroup = new FormGroup({
+    
+  })
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  buyItem() {
+
+  }
+
+  canselItem() {
+
   }
 
 }
