@@ -24,7 +24,7 @@ Fejlesztés alatt
 - npm run docker:build
 - npm run docker:run
 
-cd \LocoAngular\
+cd \Locomotives\
 - ng s -->
 
 # Entitások
