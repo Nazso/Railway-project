@@ -1,1 +1,76 @@
-<p class="buyItems-main" >buy-items works!</p>
+<div class="comments-main">
+    <mat-card class="math-elevation-z4 container-comment">
+        <mat-card-title>Ossza meg velünk véleményét!</mat-card-title>
+        <div class="comment-layout">
+            <mat-card-content>
+                <form class="comment-fill-width" [formGroup]="buyItemForm" fxLayout="column">
+                    <mat-form-field class="first-field" appearance="fill">
+                        <input
+                        type="text"
+                        name="username"
+                        matInput
+                        placeholder="Felhasználónév"
+                        formControlName="username">
+                    </mat-form-field>
+                    <table class="" cellspacing="0"><tr>
+                        <td><mat-form-field class="form-field" appearance="fill">
+                            <mat-label>Erőforrás</mat-label>
+                            <input
+                            type="text"
+                            name="engine"
+                            matInput
+                            [matAutocomplete]="auto"
+                            placeholder="Erőforrás"
+                            formControlName="engine"
+                            >
+                            <mat-autocomplete #auto="matAutocomplete">
+                            <!-- <mat-option *ngFor="let engine of engines" [value]="engine">
+                                <span>{{ engine }}</span>
+                            </mat-option> -->
+                            </mat-autocomplete>
+                        </mat-form-field></td>
+                        <td><mat-form-field class="form-field" appearance="fill">
+                            <input
+                            type="date"
+                            name="date"
+                            matInput
+                            placeholder="Dátum"
+                            formControlName="date">
+                        </mat-form-field></td>
+                    </tr></table>
+                    <mat-form-field class="" appearance="fill">
+                        <input
+                        type="text"
+                        name="name"
+                        matInput
+                        placeholder="Mozdony elnevezése"
+                        formControlName="name">
+                    </mat-form-field>
+                    <mat-form-field class="" appearance="fill">
+                        <input
+                        type="text"
+                        name="type"
+                        matInput
+                        placeholder="Típus"
+                        formControlName="type">
+                    </mat-form-field>
+                    <mat-form-field class="" appearance="fill">
+                        <mat-label>Ide írja a véleményét</mat-label>
+                        <textarea
+                            type="text"
+                            name="usercomment"
+                            rows="10"
+                            matInput
+                            placeholder="Ide írja a véleményét!"
+                            formControlName="usercomment">
+                        </textarea>
+                    </mat-form-field>
+                    <div>
+                        <button type="submit" mat-raised-button color="primary" (click)="buyItem()">Mentés</button>
+                        <button type="submit" mat-raised-button color="warn" (click)="canselItem()">Mégsem</button>
+                    </div>                        
+                </form>
+            </mat-card-content>
+        </div>
+    </mat-card>
+</div>
