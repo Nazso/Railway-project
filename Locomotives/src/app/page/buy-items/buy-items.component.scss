@@ -8,3 +8,41 @@ $color_font: rgb(247, 247, 144);
     background-image: linear-gradient(to right,$background_main, $background_cards, $background_main);
     margin-top: 60px;
 }
+
+.container-comment {
+    width: 80%;
+    background-color: $background_cards;
+    border: 3px solid $color_font;
+    border-radius: 5px;
+    padding: 20px;
+    margin: auto;
+    font-size: large;
+    text-align: justify;
+}
+
+.comment-fill-width {
+    margin: auto;
+    padding: 50px;
+}
+
+.form-field {
+    width: 100%;
+
+}
+
+.first-field {
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.comment-layout {
+    width: 70%;
+    margin: 20px auto;
+    background-color: white;
+    border: 3px solid $color_font;
+    border-radius: 5px;
+}
+
+button {
+    margin: 10px;
+}
