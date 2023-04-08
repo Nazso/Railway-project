@@ -7,9 +7,11 @@ import { DetailsComponent } from './page/details/details.component';
 import { DieselComponent } from './page/diesel/diesel.component';
 import { ElectricComponent } from './page/electric/electric.component';
 import { HomeComponent } from './page/home/home.component';
+import { LoginComponent } from './page/login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'dízel', component: DieselComponent },
   { path: 'villamos', component: ElectricComponent },
   { path: 'komment', component: CommentsComponent },

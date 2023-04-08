@@ -40,6 +40,7 @@ import { BuyItemListComponent } from './page/admin/buy-item-list/buy-item-list.c
 import { UserListComponent } from './page/admin/user-list/user-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DetailsComponent } from './page/details/details.component';
+import { LoginComponent } from './page/login/login.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { DetailsComponent } from './page/details/details.component';
     CommentListComponent,
     BuyItemListComponent,
     UserListComponent,
-    DetailsComponent
+    DetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

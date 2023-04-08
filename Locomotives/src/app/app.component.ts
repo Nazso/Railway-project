@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ConfigService } from './service/config.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,13 @@ export class AppComponent {
   menuItems = this.config.menuItems;
 
   constructor(
-    private config: ConfigService
+    private config: ConfigService,
+    private router: Router
   ) {}
+
+  logout() {
+    alert("Kijelentkeztél")
+    // this.router.navigate(['admin'])
+  }
 
 }
