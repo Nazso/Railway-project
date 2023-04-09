@@ -1,33 +1,33 @@
 <div class="login-main">
     <div class="flex">
-        <form class="container-login">
+        <form [formGroup]="loginForm" class="container-login">
             <h3>Kérem jelentkezzen be az oldal megtekintéséhez!</h3>
             <mat-form-field class="form-field">
               <mat-label>Felhasználónév/Username</mat-label>
-              <input matInput placeholder="Username" value="">
+              <input matInput placeholder="Username" formControlName="username">
             </mat-form-field>
     
             <mat-form-field class="form-field">
-              <mat-label>Jelszó/Password</mat-label>
-              <input matInput placeholder="Password" value="">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email" formControlName="email">
             </mat-form-field>
-            <button mat-raised-button color="primary" (click)="userLogin()">Belépés</button>
+            <button mat-raised-button color="primary" (click)="userLogin(loginForm)">Belépés</button>
           </form>
     
         <hr>
     
-          <form class="container-login">
+          <form [formGroup]="regForm" class="container-login">
             <h3>Kérem regisztráljon a bejelentkezéshez!</h3>
             <mat-form-field class="form-field">
               <mat-label>Felhasználónév/Username</mat-label>
-              <input matInput placeholder="Username" value="">
+              <input matInput placeholder="Username" value="" formControlName="username">
             </mat-form-field>
     
             <mat-form-field class="form-field">
-              <mat-label>Jelszó/Password</mat-label>
-              <input matInput placeholder="Password" value="">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Email" value="" formControlName="email">
             </mat-form-field>
-            <button mat-raised-button color="warn" (click)="userReg()">Regisztráció</button>
+            <button mat-raised-button color="warn" (click)="userReg(regForm)">Regisztráció</button>
           </form>
     </div>
 </div>
