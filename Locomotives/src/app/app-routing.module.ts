@@ -8,12 +8,13 @@ import { DieselComponent } from './page/diesel/diesel.component';
 import { ElectricComponent } from './page/electric/electric.component';
 import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './page/login/login.component';
+import { CanActivateGuardService } from './service/can-activate-guard.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'dízel', component: DieselComponent },
-  { path: 'villamos', component: ElectricComponent },
+  { path: 'dízel', component: DieselComponent, canActivate: [CanActivateGuardService] },
+  { path: 'villamos', component: ElectricComponent, canActivate: [CanActivateGuardService] },
   { path: 'komment', component: CommentsComponent },
   { path: 'vásárlás', component: BuyItemsComponent },
   { path: 'admin', component: AdminComponent },
