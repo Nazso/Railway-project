@@ -11,6 +11,8 @@ $color_font: rgb(247, 247, 144);
     background-color: $background_main;
     position: fixed;
     top: 0;
+    min-height: 80px;
+    padding: 10px 0;
   }
   
   .sidenav-container {
@@ -28,6 +30,12 @@ $color_font: rgb(247, 247, 144);
 
   .font-color {
     color: $color_font;
+    text-align: center;
+    border: 3px solid $color_font;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,$background_main, $background_cards, $background_main);
+    padding: 5px;
+    // margin: 10px 0;
   }
   
   a[mat-button] {
@@ -35,4 +43,10 @@ $color_font: rgb(247, 247, 144);
     &.active {
       color: $color_font;
     }
+  }
+
+  .log-container {
+    display: inline;
+    position: absolute;
+    right: 10px;
   }

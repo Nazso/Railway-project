@@ -7,6 +7,7 @@ $color_font: rgb(247, 247, 144);
     background-color: $background_main;
     background-image: linear-gradient(to right,$background_main, $background_cards, $background_main);
     margin-top: 60px;
+    min-height: 550px;
 }
 
 .container-login {
@@ -23,6 +24,7 @@ $color_font: rgb(247, 247, 144);
 .flex {
     display: flex;
     justify-content: space-around;
+    margin-top: 80px;
 }
 
 .login-fill-width {
@@ -31,10 +33,9 @@ $color_font: rgb(247, 247, 144);
 }
 
 .form-field {
-    width: 30%;
+    width: 60%;
     display: block;
-    margin: 20px;
-
+    margin: 20px auto;
 }
 
 // .first-field {
@@ -50,6 +51,13 @@ $color_font: rgb(247, 247, 144);
 //     border-radius: 5px;
 // }
 
-// button {
-//     margin: 10px;
-// }
+button {
+    margin: 10px;
+}
+
+hr {
+    width: 10px;
+    border: 2px solid $background_main;
+    border-radius: 5px;
+    background-color: $color_font;
+}

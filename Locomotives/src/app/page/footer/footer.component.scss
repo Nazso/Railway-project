@@ -1,0 +1,27 @@
+$background_main: rgb(3, 81, 248);
+$background_cards: rgb(119, 205, 245);
+$color_font: rgb(247, 247, 144);
+
+.container {
+    background-color: $background_main;
+}
+
+h3 {
+    text-align: center;
+    margin-left: 10px;
+    padding-top: 20px;
+    color: white;
+    font-size: x-large;
+}
+
+p {
+    font-size: x-large;
+    padding: 5px 0;
+    margin-left: 10px;
+    color: white;
+}
+
+.flex {
+    display: flex;
+    justify-content:center;
+}
