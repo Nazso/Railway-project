@@ -17,16 +17,23 @@
                   <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
                   {{ item.text }}
             </a>
-            <a
-              
-              href="/"
-              routerLinkActive="active"
-              
-              (click)="logout()"
-              mat-button>
-                  <mat-icon>output</mat-icon>
-                  KIjelentkezés
-            </a>
+            <div class="log-container">
+              <a
+                href="/"
+                routerLinkActive="active"
+                (click)="logout()"
+                mat-button>
+                    <mat-icon>output</mat-icon>
+                    Kijelentkezés
+              </a>
+              <a
+                href="/login"
+                routerLinkActive="active"
+                mat-button>
+                    <mat-icon>input</mat-icon>
+                    Bejelentkezés
+              </a>
+            </div>
           </div>
       </mat-toolbar-row>
   </mat-toolbar>
@@ -50,6 +57,7 @@
       </mat-sidenav>
       <mat-sidenav-content fxFlexFill>
         <router-outlet></router-outlet>
+        <app-footer></app-footer>
       </mat-sidenav-content>
     </mat-sidenav-container>
 </div>
