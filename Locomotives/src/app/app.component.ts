@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ConfigService } from './service/config.service';
 import { Router } from '@angular/router';
+import { AuthService } from './service/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +14,12 @@ export class AppComponent {
 
   constructor(
     private config: ConfigService,
-    private router: Router
+    private router: Router,
+    private auth: AuthService
   ) {}
 
-  logout() {
+  logout(): void {
+    this.auth.logout();
     alert("Kijelentkeztél")
     // this.router.navigate(['admin'])
   }
