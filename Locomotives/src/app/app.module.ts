@@ -41,6 +41,7 @@ import { UserListComponent } from './page/admin/user-list/user-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DetailsComponent } from './page/details/details.component';
 import { LoginComponent } from './page/login/login.component';
+import { FooterComponent } from './page/footer/footer.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { LoginComponent } from './page/login/login.component';
     BuyItemListComponent,
     UserListComponent,
     DetailsComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

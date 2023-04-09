@@ -12,4 +12,12 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public userLogin(): void {
+    alert('This user is logged in!')
+  }
+
+  public userReg(): void {
+    alert('This user is registrated!')
+  }
+
 }

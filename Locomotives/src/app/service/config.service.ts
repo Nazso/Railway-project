@@ -20,13 +20,11 @@ export class ConfigService {
     {url: '/vásárlás', text: 'Vásárlás', icon: 'shopping_cart'},
     {url: '/komment', text: 'Kommentek', icon: 'edit_note'},
     {url: '/admin', text: 'Admin', icon: 'settings_suggest'},
-    {url: '/login', text: 'Bejelentkezés', icon: 'input'},
+    // {url: '/login', text: 'Bejelentkezés', icon: 'input'},
     // {url: '/', text: 'Kijelentkezés', icon: 'output', click: 'logout()'},
   ]
 
   constructor() { }
 }
-function logout() {
-  alert("Kijelentkeztél")
-}
+
 
