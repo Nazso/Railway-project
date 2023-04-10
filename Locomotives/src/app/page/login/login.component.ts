@@ -10,8 +10,8 @@ import { AuthService } from 'src/app/service/auth.service';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup = this.fb.group({
-    username: '',
-    email: ''
+    username: [''],
+    email: ['']
   })
 
 
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
   }
 
   public userReg(regForm: FormGroup): void {
-    
+
     console.log(regForm.value);
     regForm.reset();
     // alert('This user is registrated!')
