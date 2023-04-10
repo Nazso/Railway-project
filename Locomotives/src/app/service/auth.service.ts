@@ -13,8 +13,8 @@ export class AuthService {
 
   login(username: string, email: string): void {
     this._loggedInUser = {
-      username: '',
-      email: ''
+      username: 'alfe',
+      email: 'fhs@th.lkj'
     }
   }
 
