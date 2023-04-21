@@ -33,14 +33,14 @@ export class LoginComponent implements OnInit {
     this.auth.login(loginForm.value.username, loginForm.value.email)
     console.log(loginForm.value);
     loginForm.reset()
-    // alert('This user is logged in!')
+    alert('This function has not been implemented yet!')
   }
 
   public userReg(regForm: FormGroup): void {
 
     console.log(regForm.value);
     regForm.reset();
-    // alert('This user is registrated!')
+    alert('This function has not been implemented yet!')
   }
 
 }
