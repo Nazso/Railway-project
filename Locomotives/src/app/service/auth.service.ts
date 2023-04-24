@@ -7,10 +7,7 @@ import { User } from '../models/user.model';
 
 export class AuthService {
 
-  private _loggedInUser?: User = {
-    username: '',
-    email: ''
-  }
+  private _loggedInUser?: User;
 
   login(username: string, email: string): void {
     this._loggedInUser = {
