@@ -29,12 +29,18 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public userLogin(loginForm: FormGroup): void {
-    this.auth.login(loginForm.value.username, loginForm.value.email)
+  onSubmit(loginForm: FormGroup) {
+    // alert ('logged in!');
     console.log(loginForm.value);
-    loginForm.reset()
-    alert('This function has not been implemented yet!')
+    this.auth.login(loginForm.value.username, loginForm.value.email)
   }
+
+  // public userLogin(loginForm: FormGroup): void {
+  //   this.auth.login(loginForm.value.username, loginForm.value.email)
+  //   console.log(loginForm.value);
+  //   loginForm.reset()
+  //   alert('This function has not been implemented yet!')
+  // }
 
   public userReg(regForm: FormGroup): void {
 
