@@ -1,6 +1,6 @@
 <div class="login-main">
     <div class="flex">
-        <form [formGroup]="loginForm" class="container-login">
+        <form [formGroup]="loginForm" class="container-login" (ngSubmit)="onSubmit(loginForm)">
             <h3>Kérem jelentkezzen be az oldal megtekintéséhez!</h3>
             <mat-form-field class="form-field">
               <mat-label>Felhasználónév/Username</mat-label>
@@ -11,7 +11,7 @@
               <mat-label>Email</mat-label>
               <input matInput placeholder="Email" formControlName="email">
             </mat-form-field>
-            <button mat-raised-button color="primary" (click)="userLogin(loginForm)">Belépés</button>
+            <button mat-raised-button color="primary">Belépés</button>
           </form>
     
         <hr>
