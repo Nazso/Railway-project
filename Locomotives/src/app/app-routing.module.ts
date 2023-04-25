@@ -9,10 +9,11 @@ import { ElectricComponent } from './page/electric/electric.component';
 import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './page/login/login.component';
 import { CanActivateGuardService } from './service/can-activate-guard.service';
+import { DeactivateGuardService } from './service/deactivate-guard.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent, canDeactivate: [DeactivateGuardService] },
   { path: 'dízel', component: DieselComponent, canActivate: [CanActivateGuardService] },
   { path: 'villamos', component: ElectricComponent, canActivate: [CanActivateGuardService] },
   { path: 'komment', component: CommentsComponent },
