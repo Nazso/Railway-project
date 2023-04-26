@@ -10,14 +10,16 @@ import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './page/login/login.component';
 import { CanActivateGuardService } from './service/can-activate-guard.service';
 import { DeactivateGuardService } from './service/deactivate-guard.service';
+import { BuyitemDeactivateGuardService } from './service/buyitem-deactivate-guard.service';
+import { CommentDeactivateGuardService } from './service/comment-deactivate-guard.service';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent, canDeactivate: [DeactivateGuardService] },
   { path: 'dízel', component: DieselComponent, canActivate: [CanActivateGuardService] },
   { path: 'villamos', component: ElectricComponent, canActivate: [CanActivateGuardService] },
-  { path: 'komment', component: CommentsComponent },
-  { path: 'vásárlás', component: BuyItemsComponent },
+  { path: 'komment', component: CommentsComponent, canDeactivate: [CommentDeactivateGuardService] },
+  { path: 'vásárlás', component: BuyItemsComponent, canDeactivate: [BuyitemDeactivateGuardService] },
   { path: 'admin', component: AdminComponent },
   { path: 'részletek/:id', component: DetailsComponent },
   { path: '**', redirectTo: '' },
