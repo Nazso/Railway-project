@@ -18,9 +18,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent, canDeactivate: [DeactivateGuardService] },
   { path: 'dízel', component: DieselComponent, canActivate: [CanActivateGuardService] },
   { path: 'villamos', component: ElectricComponent, canActivate: [CanActivateGuardService] },
-  { path: 'komment', component: CommentsComponent, canDeactivate: [CommentDeactivateGuardService] },
-  { path: 'vásárlás', component: BuyItemsComponent, canDeactivate: [BuyitemDeactivateGuardService] },
-  { path: 'admin', component: AdminComponent },
+  { path: 'komment', component: CommentsComponent, canActivate: [CanActivateGuardService], canDeactivate: [CommentDeactivateGuardService] },
+  { path: 'vásárlás', component: BuyItemsComponent, canActivate: [CanActivateGuardService], canDeactivate: [BuyitemDeactivateGuardService] },
+  { path: 'admin', component: AdminComponent, canActivate: [CanActivateGuardService] },
   { path: 'részletek/:id', component: DetailsComponent },
   { path: '**', redirectTo: '' },
 ];
