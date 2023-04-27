@@ -1,5 +1,5 @@
 export interface Comment {
-    _id: string,
+    _id?: string,
     username: string,
     date: string,
     engine: string,
