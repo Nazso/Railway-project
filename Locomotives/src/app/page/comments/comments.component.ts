@@ -17,7 +17,7 @@ export class CommentsComponent implements OnInit {
   private saveCommentSubscription?: Subscription;
 
   public commentForm: FormGroup = new FormGroup({
-    id: new FormControl(''),
+    // id: new FormControl(''),
     username: new FormControl('', [Validators.required]),
     date: new FormControl('', [Validators.required]),
     engine: new FormControl('', [Validators.required]),

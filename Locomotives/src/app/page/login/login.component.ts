@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   onSubmit(loginForm: FormGroup) {
     // alert ('logged in!');
     console.log(loginForm.value);
-    this.auth.login(loginForm.value.username, loginForm.value.email)
+    this.auth.login(loginForm.value.username, loginForm.value.email);
   }
 
   // public userLogin(loginForm: FormGroup): void {
