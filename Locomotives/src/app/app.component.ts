@@ -11,6 +11,7 @@ import { AuthService } from './service/auth.service';
 export class AppComponent {
   title = 'Locomotives';
   menuItems = this.config.menuItems;
+  visibility: boolean = false;
 
   constructor(
     private config: ConfigService,
