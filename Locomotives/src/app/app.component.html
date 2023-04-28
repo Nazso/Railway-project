@@ -19,6 +19,7 @@
             </a>
             <div class="log-container">
               <a
+                *ngIf="visibility"
                 href="/"
                 routerLinkActive="active"
                 (click)="logout()"
@@ -27,6 +28,7 @@
                     Kijelentkezés
               </a>
               <a
+                *ngIf="!visibility"
                 href="/login"
                 routerLinkActive="active"
                 mat-button>
