@@ -1,0 +1,59 @@
+<mat-toolbar  class="app-toolbar mat-elevation-z6" color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button fxShow="true" fxHide.gt-sm (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="font-color">Magyarország<br>mozdonyai</span>
+        <span class="example-spacer"></span>
+        <div fxShow="true" fxHide.lt-md="true">
+          <a
+            *ngFor="let item of menuItems"
+            [routerLink]="item.url"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: item.url === '/'}"
+            
+            mat-button>
+                <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
+                {{ item.text }}
+          </a>
+          <div class="log-container">
+            <a
+              *ngIf="visibility"
+              href="/"
+              routerLinkActive="active"
+              (click)="logout()"
+              mat-button>
+                  <mat-icon>output</mat-icon>
+                  Kijelentkezés
+            </a>
+            <a
+              *ngIf="!visibility"
+              href="/login"
+              routerLinkActive="active"
+              (click)="login()"
+              mat-button>
+                  <mat-icon>input</mat-icon>
+                  Bejelentkezés
+            </a>
+          </div>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container" fxLayout="row" fxFlex="100">
+    <mat-sidenav #sidenav>
+      <mat-nav-list class="nav-list">
+        <a
+          *ngFor="let item of menuItems"
+          [routerLink]="item.url"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: item.url === '/'}"
+          mat-list-item>
+            <mat-icon *ngIf="item.icon">{{ item.icon }}</mat-icon>
+            {{ item.text }}
+        </a>
+        <a (click)="sidenav.toggle()" mat-list-item>
+          <mat-icon>keyboard_arrow_left</mat-icon> Close
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
