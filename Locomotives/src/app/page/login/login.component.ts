@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/service/auth.service';
 
@@ -10,6 +10,8 @@ import { AuthService } from 'src/app/service/auth.service';
 
 export class LoginComponent implements OnInit {
 
+  @Input() visibility: boolean = false;
+  @Output() login = new EventEmitter();
 
   loginForm: FormGroup = this.fb.group({
     username: [''],
@@ -30,10 +32,15 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  loginClick(visibility: boolean):void {
+    this.login.emit(visibility)
+  }
+
   onSubmit(loginForm: FormGroup) {
     // alert ('logged in!');
     console.log(loginForm.value);
     this.auth.login(loginForm.value.username, loginForm.value.email);
+    this.loginClick(this.visibility)
   }
 
   // public userLogin(loginForm: FormGroup): void {
