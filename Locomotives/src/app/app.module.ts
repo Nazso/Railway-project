@@ -42,6 +42,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DetailsComponent } from './page/details/details.component';
 import { LoginComponent } from './page/login/login.component';
 import { FooterComponent } from './page/footer/footer.component';
+import { HeaderComponent } from './page/header/header.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { FooterComponent } from './page/footer/footer.component';
     UserListComponent,
     DetailsComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
