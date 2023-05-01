@@ -10,8 +10,8 @@ import { AuthService } from 'src/app/service/auth.service';
 
 export class LoginComponent implements OnInit {
 
-  @Input() visibility: boolean = false;
-  @Output() login = new EventEmitter();
+  // @Input() visibility: boolean = false;
+  // @Output() login = new EventEmitter();
 
   loginForm: FormGroup = this.fb.group({
     username: [''],
@@ -32,15 +32,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  loginClick(visibility: boolean):void {
-    this.login.emit(visibility)
-  }
+  // loginClick(visibility: boolean):void {
+  //   // this.login.emit(visibility)
+  // }
 
   onSubmit(loginForm: FormGroup) {
     // alert ('logged in!');
     console.log(loginForm.value);
+    alert('This function has not been implemented yet!');
     this.auth.login(loginForm.value.username, loginForm.value.email);
-    this.loginClick(this.visibility)
+    // this.loginClick(this.visibility)
   }
 
   // public userLogin(loginForm: FormGroup): void {
