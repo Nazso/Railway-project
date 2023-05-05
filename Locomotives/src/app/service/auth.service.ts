@@ -17,11 +17,15 @@ export class AuthService {
   }
 
   get loggedInUser(): User | undefined {
-    return this._loggedInUser
+
+    return this._loggedInUser;
+
   }
 
   logout(): void {
+
     this._loggedInUser = undefined;
+
   }
 
   constructor() { }
